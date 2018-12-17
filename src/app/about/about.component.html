@@ -1,0 +1,58 @@
+
+<input type="text" (keyup.enter)=btnClickEnter($event)/>
+<p *ngFor='let obj of list'>{{obj.name}}</p>
+
+<p [class.redColor]="isActive" [class.greenColor]="!isActive">Bodor</p>
+{{title}}
+<app-contact-us></app-contact-us>
+<button (click) ='btnClick()'>suubmit </button>
+
+
+<div *ngFor='let obj of data ; index as i ; first as first ; last as last'>
+   
+    <p [style.color] ="first ?'pink':last?'green':'blue' ">{{i}}  -  {{obj.id}}   -  {{obj.name}}</p>
+
+</div>
+
+
+
+<ul>
+    <li *ngFor='let user of data'>{{user.name}}</li>
+</ul>
+
+<p [class.redColor] ='number>20'> Reeham </p>
+
+<h2 [style.color]="isActive?'green' : 'blue'">i'm h2 text</h2>
+
+<h2 [style.backgroundColor]="isActive?'green' : 'blue'">
+    i'm h2 text
+
+</h2>
+
+<input #ageInput (keyup.enter)='btnAgeClick($event.target)'/>
+<button (click) = "btnAgeClick(ageInput)"> print age</button>
+
+<br/>
+<input [(ngModel)] = 'name'>
+
+<p>welcome {{name}}</p>
+<button (click) = 'printName()'> print my  name</button>
+
+
+<button (click) ='toggleBtn()'>toggleBtn</button>
+
+
+<p *ngIf='isActive' >i'm active</p>
+
+
+<p *ngIf='!isActive'>i'm inactive</p>
+
+
+<div [ngSwitch] ='x'>
+    <p *ngSwitchCase='1'>one</p>
+    <p *ngSwitchCase='2'>two</p>
+    <p *ngSwitchCase='3'>three</p>
+    <p *ngSwitchDefault>defulat unknown</p>
+</div>
+
+
